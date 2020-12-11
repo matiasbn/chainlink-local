@@ -1,0 +1,28 @@
+{
+  "name": "@chainlink/box",
+  "version": "0.6.0",
+  "description": "A Chainlink example in a Truffle box",
+  "scripts": {
+    "compile": "npx truffle compile",
+    "deploy": "npx truffle deploy --network testing",
+    "remix": "npx remixd -s . --remix-ide https://remix.ethereum.org"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@chainlink/contracts": "^0.0.8",
+    "@openzeppelin/contracts": "^3.1.0",
+    "@truffle/hdwallet-provider": "^1.0.40",
+    "dotenv": "^8.2.0",
+    "prettier": "^2.2.1",
+    "truffle-hdwallet-provider": "^1.0.17"
+  },
+  "devDependencies": {
+    "@chainlink/belt": "^0.0.1",
+    "@chainlink/test-helpers": "0.0.5",
+    "@openzeppelin/test-helpers": "^0.5.6",
+    "chai": "^4.2.0",
+    "depcheck": "^0.9.1",
+    "solhint": "^2.1.0",
+    "truffle": "^5.1.5"
+  }
+}
