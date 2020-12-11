@@ -5,6 +5,7 @@
   "scripts": {
     "compile": "npx truffle compile",
     "deploy": "npx truffle deploy --network testing",
+    "deploy:reset": "npx truffle deploy --reset --network testing",
     "remix": "npx remixd -s . --remix-ide https://remix.ethereum.org"
   },
   "license": "MIT",
