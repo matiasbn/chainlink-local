@@ -65,7 +65,7 @@
 
 ### Run the tests on stacktical-dsla-contracts
 - Remember to use the same mnemonic every time you interact with the Oracle. This is with the .env file and the ```TEST_MNEMONIC``` field.
-- Copy the necessary values to the environments.config.js file accordingly e.g. the JobID that you just created goes on the ```chainlinkJobId```field.
+- Copy the necessary values to the environments.config.js file accordingly e.g. the JobID that you just created goes on the ```chainlinkJobId```field on the 'local' env.
 - Run ```npm run test``` to test locally.
 - Verify the interactions e.g. Ganache UI, Chainlink Dashboard:
 
