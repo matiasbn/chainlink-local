@@ -10,6 +10,15 @@ module.exports = {
       },
       network_id: "*",
     },
+    chainlink: {
+      provider: function () {
+        return new HDWalletProvider(
+          test_mnemonic,
+          "http://157.230.94.208:8545"
+        );
+      },
+      network_id: "*",
+    },
   },
   compilers: {
     solc: {

@@ -6,6 +6,7 @@
     "compile": "npx truffle compile",
     "deploy": "npx truffle deploy --network testing",
     "deploy:reset": "npx truffle deploy --reset --network testing",
+    "deploy:chainlink:reset": "npx truffle deploy --reset --network chainlink",
     "remix": "npx remixd -s . --remix-ide https://remix.ethereum.org"
   },
   "license": "MIT",
