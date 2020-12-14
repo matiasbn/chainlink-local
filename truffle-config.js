@@ -6,7 +6,7 @@ module.exports = {
   networks: {
     testing: {
       provider: function () {
-        return new HDWalletProvider(test_mnemonic, "http://192.168.0.5:7545");
+        return new HDWalletProvider(test_mnemonic, "http://localhost:8545");
       },
       network_id: "*",
     },
