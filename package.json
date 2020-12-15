@@ -1,7 +1,7 @@
 {
-  "name": "@chainlink/box",
+  "name": "chainlink-local",
   "version": "0.6.0",
-  "description": "A Chainlink example in a Truffle box",
+  "description": "An automated local chainlink env deployment",
   "scripts": {
     "deploy:local-chainlink": "docker-compose down && npm run chore:clean-chainlink && docker-compose up -d && npm run deploy:contracts && npm run prepare-node",
     "run:local-chainlink": "docker-compose down && docker-compose up",
