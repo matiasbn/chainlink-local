@@ -7,7 +7,9 @@
 
     This script will clean the room for a new deployment, erasing the ganache, postgresql and chainlink directories and files created on run time.
      
-    It will deploy the contracts, fund the Chainlink node and allow it to fullfill requirements the script is in ```scripts/prepare-node.js```.  
+    Thien it will deploy the contracts, and run a script to fund the Chainlink node and allow it to fullfill requirements. 
+    
+    The script is in ```scripts/prepare-node.js```.  
 
 - Create the Job:
 
