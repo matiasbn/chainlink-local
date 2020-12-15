@@ -26,20 +26,6 @@ const updatedAddress = () => {
     return false;
   }
   if (!tempKey) return false;
-  // const { address: currentAddress } = JSON.parse(
-  //   fs.readFileSync(path.resolve(__dirname, "../chainlink/tempkeys/" + tempKey))
-  // );
-  // let lastAddress = null;
-  // try {
-  //   lastAddress = fs
-  //     .readFileSync(path.resolve(__dirname, "../lastAddress"))
-  //     .toString()
-  //     .trim();
-  // } catch (error) {
-  //   console.log("lastAddress file does not exist, creating....");
-  // }
-  // if (lastAddress === web3.utils.toChecksumAddress(currentAddress))
-  //   return false;
   const { address } = JSON.parse(
     fs.readFileSync(path.resolve(__dirname, "../chainlink/tempkeys/" + tempKey))
   );
@@ -59,7 +45,6 @@ module.exports = async (callback) => {
       await wait(5000);
       CHAINLINK_NODE_ADDRESS = updatedAddress();
     }
-    // fs.writeFileSync(path.resolve(__dirname, "../lastAddress"), address);
     console.log("Chainlink Node Address: " + CHAINLINK_NODE_ADDRESS);
     const [defaultAccount] = await web3.eth.getAccounts();
     await web3.eth.sendTransaction({
