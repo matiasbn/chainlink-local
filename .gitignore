@@ -3,5 +3,6 @@ node_modules/
 ganache/db/
 chainlink/tempkeys/
 chainlink/secret
+chainlink/log.jsonl
 postgres/db/
 lastAddress
