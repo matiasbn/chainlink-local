@@ -3,7 +3,7 @@
 - Docker (docker-compose)
 ## Initial deployment
 - Install the packages ```npm i```
-- Run ```npm run deploy:chainlink```: 
+- Run ```npm run deploy:local-chainlink```: 
 
     This script will clean the room for a new deployment, erasing the ganache, postgresql and chainlink directories and files created on run time.
      
@@ -11,19 +11,22 @@
 
 - Create the Job:
 
-    Copy the ```httpget.json``` and paste it as a new Job on Jobs/New Jobs.
+    Once the above script finishes, your Chainlink node would be ready to use.
+    
+    Go to ```http://localhost:6688/``` and use the credentials described at ```chainlink/.api``` file to login.
 
-- Copy the Job Id:
-
+    Go to Jobs tab and copy/paste the ```httpget.json``` content into it.
+    
     Don't forget to copy the Job id into the ```environments.config.js``` file in the ```stacktical-dsla-contracts``` repository, in the ```local.chainlinkJobId``` field.
+    
 - That's it!:
 
     Now go and hack some cool stuff using your local Chainlink env :).
 
 ## Run last configuration.
 
-If you stopped your last configuration (by using ctrl+c or ```docker-compose down```, is not necessary to redeploy everything. 
-You just have to run ```npm run deploy:local-chainlink``` and everything would be where you left it.
+If you stopped your last configuration (by using ctrl+c or ```docker-compose down```), is not necessary to redeploy everything. 
+You just have to run ```npm run run:local-chainlink``` and everything would be where you left it.
 
 ## Considerations:
 ### Mnemonic:
