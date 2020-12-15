@@ -1,3 +1,7 @@
 node_modules/
 .idea
 ganache/db/
+chainlink/tempkeys/
+chainlink/secret
+postgres/db/
+lastAddress

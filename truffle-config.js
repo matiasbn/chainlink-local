@@ -4,18 +4,9 @@ const test_mnemonic = process.env.TEST_MNEMONIC;
 
 module.exports = {
   networks: {
-    testing: {
+    local: {
       provider: function () {
         return new HDWalletProvider(test_mnemonic, "http://localhost:8545");
-      },
-      network_id: "*",
-    },
-    chainlink: {
-      provider: function () {
-        return new HDWalletProvider(
-          test_mnemonic,
-          "http://157.230.94.208:8545"
-        );
       },
       network_id: "*",
     },

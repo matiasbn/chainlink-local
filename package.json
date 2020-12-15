@@ -3,10 +3,11 @@
   "version": "0.6.0",
   "description": "A Chainlink example in a Truffle box",
   "scripts": {
-    "compile": "npx truffle compile",
-    "deploy": "npx truffle deploy --network testing",
-    "deploy:reset": "npx truffle deploy --reset --network testing",
-    "deploy:chainlink:reset": "npx truffle deploy --reset --network chainlink",
+    "deploy:local-chainlink": "docker-compose down && npm run chore:clean-chainlink && docker-compose up -d && npm run deploy:contracts && npm run prepare-node",
+    "run:local-chainlink": "docker-compose down && docker-compose up",
+    "chore:clean-chainlink": "rm -rf postgres/db ganache/db chainlink/tempkeys chainlink/secret",
+    "deploy:contracts": "npx truffle deploy --reset --network local",
+    "prepare-node": "truffle exec --network local scripts/prepare-node.js",
     "remix": "npx remixd -s . --remix-ide https://remix.ethereum.org"
   },
   "license": "MIT",
