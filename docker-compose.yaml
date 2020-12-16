@@ -21,7 +21,7 @@ services:
       - dsla-test
 
   chainlink-stacktical:
-    image: smartcontract/chainlink
+    image: smartcontract/chainlink:0.9.6
     ports:
       - 6688:6688
     volumes:
