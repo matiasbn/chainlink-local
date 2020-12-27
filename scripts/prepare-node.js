@@ -1,4 +1,5 @@
 const Oracle = artifacts.require("Oracle");
+const clUtils = require('./cl-utils');
 
 require("dotenv").config();
 const fs = require("fs");
@@ -62,6 +63,16 @@ module.exports = async (callback) => {
       CHAINLINK_NODE_ADDRESS
     );
     console.log("Chainlink Node Fullfillment permissions: " + permissions);
+    // To automate Job creation
+    // const httpRequestJob = clUtils.createJob('runlog');
+    // httpRequestJob.initiators[0].params.address = CHAINLINK_ORACLE_ADDRESS;
+    // httpRequestJob.tasks.push(clUtils.createTask('httpget'));
+    // httpRequestJob.tasks.push(clUtils.createTask('jsonparse'));
+    // httpRequestJob.tasks.push(clUtils.createTask('ethuint256'));
+    // httpRequestJob.tasks.push(clUtils.createTask('ethtx'));
+    // console.log('Creating timestamp job on Chainlink node...');
+    // const httpRequestJobRes = await clUtils.postJob(httpRequestJob);
+    // console.log(`Job created! Job ID: ${httpRequestJobRes.data.id}.`);
     callback();
   } catch (error) {
     callback(error);

@@ -8,7 +8,7 @@ services:
       - ./ganache/db:/chainlink/ganache-db
     networks:
       - dsla-test
-    command: --accounts 10 --defaultBalanceEther 100000 -d --db=/chainlink/ganache-db -i 1337
+    command: --accounts 10 --quiet --defaultBalanceEther 100000 -d --db=/chainlink/ganache-db -i 1337 --blockTime=2
 
   postgres-stacktical:
     image: postgres:13.1

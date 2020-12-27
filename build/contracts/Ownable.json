@@ -2539,7 +2539,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.2",
-  "updatedAt": "2020-12-15T20:20:23.760Z",
+  "updatedAt": "2020-12-20T14:19:00.479Z",
   "devdoc": {
     "details": "Contract module which provides a basic access control mechanism, where there is an account (an owner) that can be granted exclusive access to specific functions. * This module is used through inheritance. It will make available the modifier `onlyOwner`, which can be aplied to your functions to restrict their use to the owner. * This contract has been modified to remove the revokeOwnership function",
     "methods": {
